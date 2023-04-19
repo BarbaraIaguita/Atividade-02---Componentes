@@ -1,0 +1,64 @@
+﻿<Window x:Class="WpfAppContato.CadastrarFilme"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppContato"
+        mc:Ignorable="d"
+        Title="CadastrarFilme" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/CINE.JPG"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="364*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+
+
+        <TextBlock Grid.Row="0" HorizontalAlignment="Left"
+                   FontSize="36" FontWeight="Bold" Padding="19" Text="CADASTRAR FILMES" Height="NaN" Margin="193,5,0,5" Grid.RowSpan="2" Width="461" RenderTransformOrigin="0.485,0.93" Foreground="White"/>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Margin="64,48,347,163" Orientation="Vertical" Height="NaN" Width="NaN">
+
+            <Label FontSize="24" Content="Nome:" Width="647" Height="40" FontWeight="Bold" Foreground="White" />
+            <TextBox x:Name="txtNome" FontSize="19" Text="" Width="642" Height="24"/>
+            <Label FontSize="24" Content="Gênero:" Width="647" Height="36" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="txtgenero" FontSize="19" Text="" Width="642" Height="24" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" Height="NaN" Margin="583,0,0,0" Width="217">
+            <Button Content="CANCELAR" Width="91"  Margin="5 5 10 5" Background="White" FontWeight="Bold" Click="Button_Click_1"  />
+            <Button Content="SALVAR" Width="92" Margin="5 5 10 5" Background="White" FontWeight="Bold" Click="Button_Click"/>
+        </StackPanel>
+
+        <GroupBox x:Name="rdGroupProdutora" Header="Produtora" Height="NaN" Margin="72,182,523,10" Width="NaN" Grid.Row="1" FontWeight="Bold" Foreground="White" FontSize="24"/>
+        <RadioButton x:Name="rdProdutora1" Content="Ação e aventura" HorizontalAlignment="Left" Margin="97,223,0,0" VerticalAlignment="Top" Grid.Row="1" Height="16" Width="136" Foreground="White" FontSize="16"/>
+        <RadioButton x:Name="rdProdutora2" Content="Drama" HorizontalAlignment="Left" Margin="99,244,0,0" VerticalAlignment="Top" Grid.Row="1" Height="16" Width="89" Foreground="White" FontSize="16"/>
+        <RadioButton x:Name="rdProdutora3" Content="Comédia romântica" HorizontalAlignment="Left" Margin="99,265,0,0" VerticalAlignment="Top" Grid.Row="1" Height="16" Width="178" Foreground="White" FontSize="16" Checked="rdProdutora3_Checked"/>
+        <RadioButton x:Name="rdProdutora4" Content="Ficção científica" HorizontalAlignment="Left" Margin="99,286,0,0" VerticalAlignment="Top" Grid.Row="1" Height="16" Width="142" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5">
+            <RadioButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.028"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </RadioButton.RenderTransform>
+        </RadioButton>
+        <RadioButton x:Name="rdProdutora5" Content="Terror" HorizontalAlignment="Left" Margin="101,307,0,0" VerticalAlignment="Top" Grid.Row="1" Height="16" Width="87" Foreground="White" FontSize="16"/>
+
+
+    </Grid>
+</Window>
